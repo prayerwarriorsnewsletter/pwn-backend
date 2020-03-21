@@ -15,8 +15,6 @@ server.use(express.json())
 server.options('*', cors())
 
 
-// authorized = true
-
 function checkAuth(req, res, next){
     if (req.headers.authtoken){
         admin.auth().verifyIdToken(req.headers.authtoken)
